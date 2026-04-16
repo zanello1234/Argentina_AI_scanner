@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree view -->
+    <record id="l10n_ar_ai_scanner_cm_jurisdiction_tree" model="ir.ui.view">
+        <field name="name">l10n_ar.ai.scanner.cm.jurisdiction.tree</field>
+        <field name="model">l10n_ar.ai.scanner.cm.jurisdiction</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="name"/>
+                <field name="account_cm_impuesto" optional="show"/>
+                <field name="account_cm_ret_bancarias" optional="show"/>
+                <field name="account_cm_ret_iibb" optional="show"/>
+                <field name="account_cm_perc_iibb" optional="show"/>
+                <field name="account_cm_saldo_favor" optional="show"/>
+                <field name="company_id" column_invisible="True"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form view -->
+    <record id="l10n_ar_ai_scanner_cm_jurisdiction_form" model="ir.ui.view">
+        <field name="name">l10n_ar.ai.scanner.cm.jurisdiction.form</field>
+        <field name="model">l10n_ar.ai.scanner.cm.jurisdiction</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Jurisdicción">
+                            <field name="name"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="Cuentas Contables CM03">
+                        <field name="account_cm_impuesto"/>
+                        <field name="account_cm_ret_bancarias"/>
+                        <field name="account_cm_ret_iibb"/>
+                        <field name="account_cm_perc_iibb"/>
+                        <field name="account_cm_saldo_favor"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_l10n_ar_ai_scanner_cm_jurisdiction" model="ir.actions.act_window">
+        <field name="name">Jurisdicciones CM - Mapeo de Cuentas</field>
+        <field name="res_model">l10n_ar.ai.scanner.cm.jurisdiction</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Configurar cuentas contables por jurisdicción
+            </p>
+            <p>
+                Agregue cada jurisdicción provincial y asigne las cuentas contables
+                correspondientes para el Convenio Multilateral CM03.
+            </p>
+        </field>
+    </record>
+
+</odoo>

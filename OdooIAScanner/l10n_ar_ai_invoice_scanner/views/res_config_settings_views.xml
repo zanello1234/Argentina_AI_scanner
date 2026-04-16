@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_ai_scanner" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.ai.scanner</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="Escaner IA AFIP" name="l10n_ar_ai_invoice_scanner"
+                     data-string="Escaner IA AFIP"
+                     data-key="l10n_ar_ai_invoice_scanner"
+                     logo="/l10n_ar_ai_invoice_scanner/static/description/icon.png">
+                    <block title="Configuracion del Escaner IA">
+                        <setting string="Proveedor de IA"
+                                 help="Seleccione el proveedor de inteligencia artificial para el escaneo.">
+                            <field name="l10n_ar_ai_scanner_provider" widget="radio"/>
+                        </setting>
+                        <setting string="Clave API de Anthropic (Claude)"
+                                 invisible="l10n_ar_ai_scanner_provider != 'anthropic'"
+                                 help="Ingrese su clave de API de Anthropic para habilitar el escaneo con Claude.">
+                            <field name="l10n_ar_ai_scanner_api_key"
+                                   password="True"
+                                   placeholder="sk-ant-api03-..."/>
+                        </setting>
+                        <setting string="Clave API de Google (Gemini)"
+                                 invisible="l10n_ar_ai_scanner_provider != 'gemini'"
+                                 help="Ingrese su clave de API de Google para habilitar el escaneo con Gemini.">
+                            <field name="l10n_ar_ai_scanner_gemini_api_key"
+                                   password="True"
+                                   placeholder="AIza..."/>
+                        </setting>
+                        <setting string="Modelo de IA"
+                                 help="Modelo de IA a utilizar para el analisis de comprobantes.">
+                            <field name="l10n_ar_ai_scanner_model" widget="radio"/>
+                        </setting>
+                        <setting string="Escaneo Automatico al Adjuntar"
+                                 help="Escanea automaticamente al adjuntar PDF o imagen a una factura.">
+                            <field name="l10n_ar_ai_scanner_auto_scan"/>
+                        </setting>
+                    </block>
+
+                    <block title="Mapeo de Cuentas - IVA F731">
+                        <setting string="Cuenta IVA Débito Fiscal"
+                                 help="Cuenta contable para el débito fiscal en DDJJ IVA.">
+                            <field name="l10n_ar_ai_scanner_account_iva_debito"/>
+                        </setting>
+                        <setting string="Cuenta IVA Crédito Fiscal"
+                                 help="Cuenta contable para el crédito fiscal en DDJJ IVA.">
+                            <field name="l10n_ar_ai_scanner_account_iva_credito"/>
+                        </setting>
+                        <setting string="Cuenta IVA Saldo Libre Disponibilidad"
+                                 help="Cuenta contable para el saldo de libre disponibilidad en DDJJ IVA.">
+                            <field name="l10n_ar_ai_scanner_account_iva_saldo_libre"/>
+                        </setting>
+                        <setting string="Cuenta Retención IVA Sufrida"
+                                 help="Cuenta contable para retenciones IVA sufridas.">
+                            <field name="l10n_ar_ai_scanner_account_iva_retencion"/>
+                        </setting>
+                        <setting string="Cuenta Percepción IVA Sufrida"
+                                 help="Cuenta contable para percepciones IVA sufridas.">
+                            <field name="l10n_ar_ai_scanner_account_iva_percepcion"/>
+                        </setting>
+                    </block>
+
+                    <block title="Mapeo de Cuentas - SICOSS F931">
+                        <setting string="Cuenta Contribuciones Patronales"
+                                 help="Cuenta contable para contribuciones patronales (SS, OS, LRT, SVO, RENATRE).">
+                            <field name="l10n_ar_ai_scanner_account_contribuciones"/>
+                        </setting>
+                        <setting string="Cuenta Aportes Empleados"
+                                 help="Cuenta contable para aportes de empleados (SS, OS).">
+                            <field name="l10n_ar_ai_scanner_account_aportes"/>
+                        </setting>
+                    </block>
+
+                    <block title="Mapeo de Cuentas - Convenio Multilateral CM03">
+                        <setting string="Jurisdicciones CM"
+                                 help="Configure las cuentas contables para cada jurisdicción provincial del Convenio Multilateral CM03.">
+                            <button name="%(l10n_ar_ai_invoice_scanner.action_l10n_ar_ai_scanner_cm_jurisdiction)d"
+                                    type="action"
+                                    string="Configurar Jurisdicciones"
+                                    class="btn-link"
+                                    icon="fa-map"/>
+                        </setting>
+                    </block>
+
+                    <block title="Mapeo de Cuentas - Recibo de Sueldo">
+                        <setting string="Cuenta Neto de Sueldo"
+                                 help="Cuenta contable para el neto de bolsillo en recibos de sueldo.">
+                            <field name="l10n_ar_ai_scanner_account_recibo_neto"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
