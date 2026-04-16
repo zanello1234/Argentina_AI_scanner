@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AFIP Document Type Codes – Reference mapping used by the AI scanner
+    to normalise the tipo_comprobante field returned by Claude.
+
+    Source: AFIP Resolution 1415/2003 and subsequent updates.
+    These records are stored as ir.config_parameter key/value pairs so they
+    can be queried programmatically without adding a dedicated model.
+-->
+<odoo noupdate="1">
+
+    <record id="config_afip_doc_type_1" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.1</field>
+        <field name="value">FACTURA A</field>
+    </record>
+
+    <record id="config_afip_doc_type_2" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.2</field>
+        <field name="value">NOTA DE DEBITO A</field>
+    </record>
+
+    <record id="config_afip_doc_type_3" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.3</field>
+        <field name="value">NOTA DE CREDITO A</field>
+    </record>
+
+    <record id="config_afip_doc_type_4" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.4</field>
+        <field name="value">RECIBO A</field>
+    </record>
+
+    <record id="config_afip_doc_type_6" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.6</field>
+        <field name="value">FACTURA B</field>
+    </record>
+
+    <record id="config_afip_doc_type_7" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.7</field>
+        <field name="value">NOTA DE DEBITO B</field>
+    </record>
+
+    <record id="config_afip_doc_type_8" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.8</field>
+        <field name="value">NOTA DE CREDITO B</field>
+    </record>
+
+    <record id="config_afip_doc_type_9" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.9</field>
+        <field name="value">RECIBO B</field>
+    </record>
+
+    <record id="config_afip_doc_type_11" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.11</field>
+        <field name="value">FACTURA C</field>
+    </record>
+
+    <record id="config_afip_doc_type_12" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.12</field>
+        <field name="value">NOTA DE DEBITO C</field>
+    </record>
+
+    <record id="config_afip_doc_type_13" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.13</field>
+        <field name="value">NOTA DE CREDITO C</field>
+    </record>
+
+    <record id="config_afip_doc_type_15" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.15</field>
+        <field name="value">RECIBO C</field>
+    </record>
+
+    <record id="config_afip_doc_type_19" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.19</field>
+        <field name="value">FACTURA E</field>
+    </record>
+
+    <record id="config_afip_doc_type_20" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.20</field>
+        <field name="value">NOTA DE DEBITO E</field>
+    </record>
+
+    <record id="config_afip_doc_type_21" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.21</field>
+        <field name="value">NOTA DE CREDITO E</field>
+    </record>
+
+    <record id="config_afip_doc_type_51" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.51</field>
+        <field name="value">FACTURA M</field>
+    </record>
+
+    <record id="config_afip_doc_type_52" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.52</field>
+        <field name="value">NOTA DE DEBITO M</field>
+    </record>
+
+    <record id="config_afip_doc_type_53" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.53</field>
+        <field name="value">NOTA DE CREDITO M</field>
+    </record>
+
+    <record id="config_afip_doc_type_81" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.81</field>
+        <field name="value">TIQUE FACTURA A</field>
+    </record>
+
+    <record id="config_afip_doc_type_82" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.82</field>
+        <field name="value">TIQUE FACTURA B</field>
+    </record>
+
+    <record id="config_afip_doc_type_83" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.83</field>
+        <field name="value">TIQUE</field>
+    </record>
+
+    <record id="config_afip_doc_type_111" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.111</field>
+        <field name="value">TIQUE FACTURA C</field>
+    </record>
+
+    <record id="config_afip_doc_type_112" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.112</field>
+        <field name="value">TIQUE NOTA DE CREDITO A</field>
+    </record>
+
+    <record id="config_afip_doc_type_113" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.113</field>
+        <field name="value">TIQUE NOTA DE CREDITO B</field>
+    </record>
+
+    <record id="config_afip_doc_type_114" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.114</field>
+        <field name="value">TIQUE NOTA DE CREDITO C</field>
+    </record>
+
+    <record id="config_afip_doc_type_116" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.116</field>
+        <field name="value">TIQUE NOTA DE DEBITO B</field>
+    </record>
+
+    <record id="config_afip_doc_type_117" model="ir.config_parameter">
+        <field name="key">l10n_ar_ai_scanner.afip_doc_type.117</field>
+        <field name="value">TIQUE NOTA DE DEBITO C</field>
+    </record>
+
+</odoo>
