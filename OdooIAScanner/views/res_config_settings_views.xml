@@ -77,7 +77,7 @@
                     <block title="Mapeo de Cuentas - Convenio Multilateral CM03">
                         <setting string="Jurisdicciones CM"
                                  help="Configure las cuentas contables para cada jurisdicción provincial del Convenio Multilateral CM03.">
-                            <button name="%(l10n_ar_ai_invoice_scanner.action_l10n_ar_ai_scanner_cm_jurisdiction)d"
+                            <button name="%(action_l10n_ar_ai_scanner_cm_jurisdiction)d"
                                     type="action"
                                     string="Configurar Jurisdicciones"
                                     class="btn-link"
