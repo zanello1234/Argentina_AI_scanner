@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Argentina AI Invoice Scanner',
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.0.1',
     'category': 'Accounting/Localizations',
     'summary': 'Escaneo inteligente de facturas, tickets, DDJJ IVA, SICOSS, CM y recibos argentinos con IA (Claude / Gemini)',
     'description': """

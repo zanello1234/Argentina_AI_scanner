@@ -47,10 +47,16 @@ class ResConfigSettings(models.TransientModel):
             ('claude-sonnet-4-5', 'Anthropic: Claude Sonnet 4.5 (Recomendado)'),
             ('claude-opus-4-5', 'Anthropic: Claude Opus 4.5'),
             ('claude-haiku-3-5', 'Anthropic: Claude Haiku 3.5 (Más rápido)'),
+            # Alias de Google: apuntan siempre a la última versión estable, así la
+            # lista no queda vieja cuando Google retira un modelo puntual (los
+            # gemini-2.5 y 3.0/3.1 con número fijo dejaron de estar disponibles
+            # para claves nuevas y devuelven HTTP 404).
+            ('gemini-pro-latest', 'Google: Gemini Pro (última versión, recomendado)'),
+            ('gemini-flash-latest', 'Google: Gemini Flash (última versión, más rápido)'),
             ('gemini-3.1-pro', 'Google: Gemini 3.1 Pro (Mayor precisión)'),
             ('gemini-3.0-pro', 'Google: Gemini 3.0 Pro'),
             ('gemini-2.5-pro', 'Google: Gemini 2.5 Pro'),
-            ('gemini-2.5-flash', 'Google: Gemini 2.5 Flash (Recomendado)'),
+            ('gemini-2.5-flash', 'Google: Gemini 2.5 Flash'),
         ],
         string='Modelo de IA',
         config_parameter='l10n_ar_ai_scanner.model',
